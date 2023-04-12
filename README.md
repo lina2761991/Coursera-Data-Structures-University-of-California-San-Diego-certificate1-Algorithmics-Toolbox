@@ -131,7 +131,7 @@ def quick_sort(arr):<br/><br/>
             else:<br/>
                 right.append(arr[i])<br/>
         return quick_sort(left) + [pivot] + quick_sort(right)<br/>
-# week 5<br/>
+# week 5 + 6<br/>
 
 ## dynamic programming <br/>
 

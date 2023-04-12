@@ -1,12 +1,12 @@
 Coursera-Data-Structures-University-of-California-San-Diego-certificate1-Algorithmics-Toolbox
 this is wht i did in the first certificate of data structure certification of University Of San Diego called "Algorithmic tool box"
 				
-#week 1 <br/>
-##Stress Testing :<br/>
+# week 1 <br/>
+## Stress Testing :<br/>
 Stress testing generates random tests in an infinite loop and for each test, it launches your solution on this test and an alternative solution on the same test and compares the results<br/>
 Stress testing is also known as Endurance Testing or Torture Testing.It is used to determine how an application or system behaves when under extreme levels of stress. This testing puts the system or application through scenarios designed to push it beyond its normal limits.<br/>
 The aim is to find out how stable your product is by stretching it beyond its bandwidth capability. Stress testing evaluates how an application will behave beyond normal conditions and normal peak load.<br/>
-###A stress test consists of:<br/>
+### A stress test consists of:<br/>
 1. Your implementation of an algorithm.<br/> 
 2. An alternative, trivial and slow, but correct implementation of an algorithm for the same problem.<br/>
 3. A random test generator.<br/>
@@ -20,7 +20,7 @@ the steps we did:<br/>
 5. you display the inputs that led to this result (debug)<br/>
 6. correct the bug and run the test again <br/>
 7. once everything is fixed, you comment out the slow (first reflection) solution and you stick with the optimum solution, then you submit it<br/>
-##Notes<br/>
+## Notes<br/>
 Stress testing can include various activities such as:<br/>
 * Overloading the system with lots of jobs<br/>
 * Removing system components<br/>
@@ -34,10 +34,10 @@ How Do You Stress Test a Software?<br/>
     • Result analysis: You have the data, so now you’ll look at the test results. From this, you should be able to identify any bottlenecks in the system.<br/>
     • Optimization: Now you’ve done your analysis, you’ll be able to make the necessary changes. That may be fine-tuning the system, changing configurations, or optimizing the code to meet your goals.<br/>
 a bottleneck refers to a component that limits the potential of other hardware due to differences in the maximum capabilities of the two components.<br/>
-####Tasks done in this part:<br/>
+#### Tasks done in this part:<br/>
 sum_of_two_digits and maximum_pairwise_product<br/>
-#week 2<br/>
-##Big O notation:<br/>
+# week 2<br/>
+## Big O notation:<br/>
 big-Θ is used when the running time is the same for all cases, big-O for the worst case running time, and big-Ω for the best case running time. 
 keep in mind:v
   constant <log(6) n < log(2) n < n^0.5 < n < n log n < n^2 < n^2 log n < 2^n(this is called exponential) < n!<br/>
@@ -49,32 +49,32 @@ keep in mind:v
 
 
 the 3 most common algorithmic design technics are; greedy algorithms, divide and conquer and dynamic programming<br/>
-##Tasks done in this part:
+## Tasks done in this part:
 fibonacci_number<br/>
 last_digit_of_fibonacci_number<br/>
 greatest_common_diviser<br/>
 least_common_mltiple<br/>
-#week 3<br/>
-##greedy algorithm <br/>
+# week 3<br/>
+## greedy algorithm <br/>
 
-###What is a 'Greedy algorithm'?<br/>
+## #What is a 'Greedy algorithm'?<br/>
 A greedy algorithm, as the name suggests, always makes the choice that seems to be the best at that moment. This means that it makes a locally-optimal choice in the hope that this choice will lead to a globally-optimal solution.<br/>
 Pros: simple, easy and run fast <br/>
 Cons: doesn't provide global optimum solution<br/>
 How do you decide which choice is optimal?<br/>
 Assume that you have an objective function that needs to be optimized (either maximized or minimized) at a given point. A Greedy algorithm makes greedy choices at each step to ensure that the objective function is optimized. The Greedy algorithm has only one shot to compute the optimal solution so that it never goes back and reverses the decision.<br/>
-###Greedy algorithms have some advantages and disadvantages:<br/>
+### Greedy algorithms have some advantages and disadvantages:<br/>
  1.	  It is quite easy to come up with a greedy algorithm (or even multiple greedy algorithms) for a problem.<br/>
  2.	  Analysing the run time for greedy algorithms will generally be much easier than for other techniques (like Divide and conquer). For the Divide and conquer technique, it is not clear whether the technique is fast or slow. This is because at each level of recursion the size of gets smaller and the number of sub-problems increases.<br/>
  3.	  The difficult part is that for greedy algorithms you have to work much harder to understand correctness issues. <br/>
 Even with the correct algorithm, it is hard to prove why it is correct. Proving that a greedy algorithm is correct is more of an art than a science. It involves a lot of creativity.<br/>
 Example of greedy algorithm is:<br/>
 knapsack problem(the spices problem)  – money change  – selection sort(with each iteration we select the minimum number and then swap it with the next number if it was smaller, its complexity is O(n²)) <br/>
-###Notes:<br/>
+### Notes:<br/>
 Greedy means that the algorithm on each step selects some option which is locally the best. That is, it has no look-ahead.<br/> 
 Greedy algorithms they cover as much as possible of the cases and solutions (that's why they r called greedy)<br/>
 if we have something sorted, the greedy move can be faster after sorting (which what we did in the knapsack problem)<br/>
-####Python notes:<br/>
+#### Python notes:<br/>
 List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list. <br/>
 Example:<br/>
 fruits = ["apple","banana","cherry","kiwi","mango"]<br/>
@@ -89,8 +89,8 @@ A lambda function is a small anonymous function. It can take any number of argum
 Example:<br/>
 lst.sort(key = lambda x: x[0]/x[1], reverse = True)<br/>
 
-#week 4<br/>
-##divide and conquer algorithm<br/>
+# week 4<br/>
+## divide and conquer algorithm<br/>
 If you want to solve a problem using a divide-and-conquer strategy, you have to think about the following three steps: <br/>
 1. Breaking a problem into smaller sub-problems. (divide part)<br/>
 2. Solving each sub-problem recursively. (conquer part) <br/>
@@ -131,16 +131,16 @@ def quick_sort(arr):<br/><br/>
             else:<br/>
                 right.append(arr[i])<br/>
         return quick_sort(left) + [pivot] + quick_sort(right)<br/>
-#week 5<br/>
+# week 5<br/>
 
-##dynamic programming <br/>
+## dynamic programming <br/>
 
 Dynamic Programming is mainly an optimization over plain recursion. Wherever we see a recursive solution that has repeated calls for the same inputs, we can optimize it using Dynamic Programming. The idea is to simply store the results of sub-problems so that we do not have to re-compute them when needed later. This simple optimization reduces time complexities from exponential to polynomial. <br/>
 * In this part I did a quizz , about number of paths in which I used the Blaise Pascal triangle( each number is sthe sum of numbers above it )
 =>whenever theres recursion, we can do dynamic programming to reduce the time complexity and not calculate smthg twice <br/><br/><br/><br/>
 
 
-#Notes ;
+# Notes ;
 <br/>
 the number of leaves in a tree must be at least n!<br/>
 The worst case runing algorithm is at least the depth of d<br/>
@@ -159,11 +159,11 @@ What to do if your solution doesn’t work?<br/>
 
 
 the steps to follow :<br/>
-*verify that you didn't exceed the constraints <br/>
-*Design some general test(s) for which you know the correct answer. Don’t look at your<br/>
+* verify that you didn't exceed the constraints <br/>
+* Design some general test(s) for which you know the correct answer. Don’t look at your<br/>
 code’s answer for this test before you figure out what the answer should be with a pen
 and paper.<br/>
-*If you got a time limit exceeded error measures how long your program works for the
+* If you got a time limit exceeded error measures how long your program works for the
 larger inputs. The following functions help measure the CPU time since the start of
 the program<br/>
 python time.clock() returns the floating-point value in seconds.<br/>
@@ -182,7 +182,7 @@ and python is always referenced)<br/>
 NOTES: <br/>
 if __name__ == '__main__' in python meaning =>  It Allows You to Execute Code When the File Runs as a Script, but Not When It’s Imported as a Module<br/>
 
-#<br/>the use of under score in python :<br/>
+# the use of under score in python :<br/>
 * Python automatically stores the value of the last expression in the interpreter to a particular variable called "_."<br/>
 *Underscore(_) is also used to ignore the values. 
 ## ignoring a value a, _, b = (1, 2, 3) # a = 1, b = 3 <br/>
@@ -191,7 +191,7 @@ for _ in range(5): print(_) <br/>
 *Single Pre Underscore is used for internal use. Most of us don't use it because of that reason. <br/>
 
 
-###single_postunderscore
+### single_postunderscore
 name_<br/>
 Sometimes if you want to use Python Keywords as a variable, function or class names, you can use this convention for that<br/>
 You can avoid conflicts with the Python Keywords by adding an underscore at the end of the name which you want to use.<br/>

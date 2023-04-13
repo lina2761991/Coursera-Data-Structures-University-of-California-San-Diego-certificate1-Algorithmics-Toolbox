@@ -110,14 +110,14 @@ selection sort doesn't depend on the input data, its quadratic o( n² )<br/>
 merge sort is faster than selection sort, its speed is o(n log n );<br/>
  splitting is what does the log n cuz we keep splitting by 2 while n is the fact of merging and organizing <br/>
 any comparison algorithm can be shown as a huge tree ( cuz we'll always make choices )<br/>
-quick sort algorithm<br/>
-the general steps:<br/>
+#### quick sort algorithm<br/>
+##### the general steps:<br/>
     1. Choose a pivot element from the array.<br/>
     2. Partition the array into two parts based on the pivot, with all elements smaller than the pivot on the left, and all elements larger on the right.<br/>
     3. Recursively apply QuickSort to the left and right sub-arrays.<br/>
-    4. Merge the sorted sub-arrays to get the final sorted array.<br/>
+    4. Merge the sorted sub-arrays to get the final sorted array.<br/><br/>
 There are different ways to choose a pivot element, such as selecting the first or last element in the array,i worked with selecting the last element 
-python code of quick sort <br/>
+python code of quick sort <br/><br/>
 def quick_sort(arr):<br/><br/>
     if len(arr) <= 1:<br/>
         return arr

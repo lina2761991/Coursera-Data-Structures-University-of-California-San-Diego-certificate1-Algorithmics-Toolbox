@@ -123,18 +123,19 @@ any comparison algorithm can be shown as a huge tree ( cuz we'll always make cho
 	
 	
 ##### the algorithm:<br/>
-BinarySearch(K[0..n − 1],q)<br/>
-minIndex ← 0<br/>
-maxIndex ← n − 1<br/>
-while maxIndex ≥ minIndex:<br/>
-	midIndex ← ⌊(minIndex + maxIndex)/2⌋<br/>
-	if K[midIndex] = q:<br/>
-		return midIndex<br/>
-	else if K[midIndex] < q:<br/>
-		minIndex ← midIndex + 1<br/>
-	else:<br/>
-		maxIndex ← midIndex − 1<br/>
-	return −1<br/>
+
+	BinarySearch(K[0..n − 1],q)<br/>
+	minIndex ← 0<br/>
+	maxIndex ← n − 1<br/>
+	while maxIndex ≥ minIndex:<br/>
+		midIndex ← ⌊(minIndex + maxIndex)/2⌋<br/>
+		if K[midIndex] = q:<br/>
+			return midIndex<br/>
+		else if K[midIndex] < q:<br/>
+			minIndex ← midIndex + 1<br/>
+		else:<br/>
+			maxIndex ← midIndex − 1<br/>
+		return −1<br/>
     
 #### quick sort algorithm<br/>
 ##### the general steps:<br/>
@@ -146,19 +147,22 @@ while maxIndex ≥ minIndex:<br/>
     
 There are different ways to choose a pivot element, such as selecting the first or last element in the array,i worked with selecting the last element 
 ##### python code of quick sort <br/><br/>
-def quick_sort(arr):<br/><br/>
-    if len(arr) <= 1:<br/>
-        return arr
-    else:<br/>
-        pivot = arr[-1]<br/>
-        left = []<br/>
-        right = []<br/>
-        for i in range(len(arr)-1):<br/>
-            if arr[i] < pivot:<br/>
-                left.append(arr[i])<br/>
-            else:<br/>
-                right.append(arr[i])<br/>
-        return quick_sort(left) + [pivot] + quick_sort(right)<br/>
+
+
+	def quick_sort(arr):<br/><br/>
+    	if len(arr) <= 1:<br/>
+        	return arr
+    	else:<br/>
+        	pivot = arr[-1]<br/>
+        	left = []<br/>
+        	right = []<br/>
+        	for i in range(len(arr)-1):<br/>
+            	if arr[i] < pivot:<br/>
+                	left.append(arr[i])<br/>
+            	else:<br/>
+                	right.append(arr[i])<br/>
+        	return quick_sort(left) + [pivot] + quick_sort(right)<br/>
+		
 # week 5 + 6<br/>
 
 ## dynamic programming <br/>

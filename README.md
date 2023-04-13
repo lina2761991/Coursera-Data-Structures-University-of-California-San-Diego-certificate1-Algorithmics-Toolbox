@@ -116,6 +116,7 @@ any comparison algorithm can be shown as a huge tree ( cuz we'll always make cho
     2. Partition the array into two parts based on the pivot, with all elements smaller than the pivot on the left, and all elements larger on the right.<br/>
     3. Recursively apply QuickSort to the left and right sub-arrays.<br/>
     4. Merge the sorted sub-arrays to get the final sorted array.<br/><br/>
+    
 There are different ways to choose a pivot element, such as selecting the first or last element in the array,i worked with selecting the last element 
 python code of quick sort <br/><br/>
 def quick_sort(arr):<br/><br/>

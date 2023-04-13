@@ -112,26 +112,29 @@ merge sort is faster than selection sort, its speed is o(n log n );<br/>
 any comparison algorithm can be shown as a huge tree ( cuz we'll always make choices )<br/>
 #### binary search algorithm<br/>
 ##### the general steps:<br/>
-1.Initialize the start and end indices of the search range, such that the range includes the entire input array.<br/>
-2.While the start index is less than or equal to the end index, repeat the following steps:<br/>
- a. Compute the middle index of the current range.<br/>
- b. If the target element is equal to the middle element, return the middle index.<br/>
- c. If the target element is less than the middle element, set the end index to be one less than the middle index.<br/>
- d. If the target element is greater than the middle element, set the start index to be one more than the middle index.<br/>
-3.If the target element is not found in the array, return -1.<br/>
+
+	1.Initialize the start and end indices of the search range, such that the range includes the entire input array.<br/>
+	2.While the start index is less than or equal to the end index, repeat the following steps:<br/>
+ 	a. Compute the middle index of the current range.<br/>
+ 	b. If the target element is equal to the middle element, return the middle index.<br/>
+ 	c. If the target element is less than the middle element, set the end index to be one less than the middle index.<br/>
+ 	d. If the target element is greater than the middle element, set the start index to be one more than the middle index.<br/>
+	3.If the target element is not found in the array, return -1.<br/>
+	
+	
 ##### the algorithm:<br/>
-BinarySearch(K[0..n − 1],q)
-minIndex ← 0
-maxIndex ← n − 1
-while maxIndex ≥ minIndex:
-	midIndex ← ⌊(minIndex + maxIndex)/2⌋
-	if K[midIndex] = q:
-		return midIndex
-	else if K[midIndex] < q:
-		minIndex ← midIndex + 1
-	else:
-		maxIndex ← midIndex − 1
-	return −1
+BinarySearch(K[0..n − 1],q)<br/>
+minIndex ← 0<br/>
+maxIndex ← n − 1<br/>
+while maxIndex ≥ minIndex:<br/>
+	midIndex ← ⌊(minIndex + maxIndex)/2⌋<br/>
+	if K[midIndex] = q:<br/>
+		return midIndex<br/>
+	else if K[midIndex] < q:<br/>
+		minIndex ← midIndex + 1<br/>
+	else:<br/>
+		maxIndex ← midIndex − 1<br/>
+	return −1<br/>
     
 #### quick sort algorithm<br/>
 ##### the general steps:<br/>

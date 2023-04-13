@@ -110,9 +110,15 @@ selection sort doesn't depend on the input data, its quadratic o( n² )<br/>
 merge sort is faster than selection sort, its speed is o(n log n );<br/>
  splitting is what does the log n cuz we keep splitting by 2 while n is the fact of merging and organizing <br/>
 any comparison algorithm can be shown as a huge tree ( cuz we'll always make choices )<br/>
-#### binary algorithm<br/>
+#### binary search algorithm<br/>
 ##### the general steps:<br/>
-
+1.Initialize the start and end indices of the search range, such that the range includes the entire input array.<br/>
+2.While the start index is less than or equal to the end index, repeat the following steps:<br/>
+ a. Compute the middle index of the current range.<br/>
+ b. If the target element is equal to the middle element, return the middle index.<br/>
+ c. If the target element is less than the middle element, set the end index to be one less than the middle index.<br/>
+ d. If the target element is greater than the middle element, set the start index to be one more than the middle index.<br/>
+3.If the target element is not found in the array, return -1.<br/>
 ##### the algorithm:<br/>
 BinarySearch(K[0..n − 1],q)
 minIndex ← 0
@@ -129,13 +135,11 @@ while maxIndex ≥ minIndex:
     
 #### quick sort algorithm<br/>
 ##### the general steps:<br/>
-1.Initialize the start and end indices of the search range, such that the range includes the entire input array.<br/>
-2.While the start index is less than or equal to the end index, repeat the following steps:<br/>
- a. Compute the middle index of the current range.<br/>
- b. If the target element is equal to the middle element, return the middle index.<br/>
- c. If the target element is less than the middle element, set the end index to be one less than the middle index.<br/>
- d. If the target element is greater than the middle element, set the start index to be one more than the middle index.<br/>
-3.If the target element is not found in the array, return -1.<br/>
+
+    1. Choose a pivot element from the array.<br/>
+    2. Partition the array into two parts based on the pivot, with all elements smaller than the pivot on the left, and all elements larger on the right.<br/>
+    3. Recursively apply QuickSort to the left and right sub-arrays.<br/>
+    4. Merge the sorted sub-arrays to get the final sorted array.<br/>
     
 There are different ways to choose a pivot element, such as selecting the first or last element in the array,i worked with selecting the last element 
 ##### python code of quick sort <br/><br/>

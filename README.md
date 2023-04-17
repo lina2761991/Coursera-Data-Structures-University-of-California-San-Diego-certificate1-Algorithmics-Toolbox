@@ -228,8 +228,7 @@ great article that sums up the difference between memoization and tabulation <br
 https://www.geeksforgeeks.org/tabulation-vs-memoization/?ref=rp<br/>
 difference between dynamic programming and divide and conquer is that in dynamic programming the sub-problems overlap( they r in common at some point (repetition) but in divide and conquer they don’t overlap.+<br/>
 
-### Notes ;
-<br/>
+### General Notes <br/>
 the number of leaves in a tree must be at least n!<br/>
 The worst case runing algorithm is at least the depth of d<br/>
 l = 2^D , l is the number of leaves and D is the depth of the tree<br/>
@@ -249,41 +248,33 @@ What to do if your solution doesn’t work?<br/>
 the steps to follow :<br/>
 * verify that you didn't exceed the constraints <br/>
 * Design some general test(s) for which you know the correct answer. Don’t look at your<br/>
-code’s answer for this test before you figure out what the answer should be with a pen
-and paper.<br/>
-* If you got a time limit exceeded error measures how long your program works for the
-larger inputs. The following functions help measure the CPU time since the start of
-the program<br/>
+code’s answer for this test before you figure out what the answer should be with a pen and paper.<br/>
+* If you got a time limit exceeded error measures how long your program works for the larger inputs. The following functions help measure the CPU time since the start of the program<br/>
 python time.clock() returns the floating-point value in seconds.<br/>
 
 Measure the time for small tests, medium tests, and large tests. You may encounter one of<br/>
-the possible outcomes:<br/>
-– Your program works for small and medium tests in time, but for larger tests, it is
-more than 10 times slower than needed (or just hangs for the large tests). In that
-case you probably have complexity issues. You may want to:<br/>
+the possible outcomes: <br/>
+– Your program works for small and medium tests in time, but for larger tests, it is more than 10 times slower than needed (or just hangs for the large tests). In that case you probably have complexity issues. You may want to: <br/>
 ∗ Measure the time parts of the program take separately (for example, how
 much time reading the input/printing the output take)<br/>
-∗ Compute the actual number of operations your algorithm and its parts do and
-see if it is as expected.<br/>
-∗ Check if you pass references to your functions (only applies to c++, in java<br/>
-and python is always referenced)<br/>
-NOTES: <br/>
+∗ Compute the actual number of operations your algorithm and its parts do and see if it is as expected.<br/>
+∗ Check if you pass references to your functions (only applies to c++, in java and python is always referenced)<br/>
+
 if __name__ == '__main__' in python meaning =>  It Allows You to Execute Code When the File Runs as a Script, but Not When It’s Imported as a Module<br/>
 
-# the use of under score in python :<br/>
-* Python automatically stores the value of the last expression in the interpreter to a particular variable called "_."<br/>
-*Underscore(_) is also used to ignore the values. 
-## ignoring a value a, _, b = (1, 2, 3) # a = 1, b = 3 <br/>
-*Use in Looping,You can use underscore(_) as a variabl<br/>e in looping.<br/>
+#### the use of under score in python : <br/>
+* Python automatically stores the value of the last expression in the interpreter to a particular variable called "_." <br/>
+* Underscore(_) is also used to ignore the values.  
+* ignoring a value a, _, b = (1, 2, 3) # a = 1, b = 3 <br/>
+* Use in Looping,You can use underscore(_) as a variabl<br/>e in looping.<br/>
 for _ in range(5): print(_) <br/>
-*Single Pre Underscore is used for internal use. Most of us don't use it because of that reason. <br/>
+* Single Pre Underscore is used for internal use. Most of us don't use it because of that reason. <br/>
 
-
-### single_postunderscore
+#### single_postunderscore
 name_<br/>
 Sometimes if you want to use Python Keywords as a variable, function or class names, you can use this convention for that<br/>
 You can avoid conflicts with the Python Keywords by adding an underscore at the end of the name which you want to use.<br/>
 * difference between input and sys.stdin <br/>
-he key differences between sys.stdin and input() are:<br/>
+#### the key differences between sys.stdin and input() are:<br/>
     • input() reads input until a newline character is encountered, while sys.stdin reads the entire input stream until the end-of-file or input signal is received.<br/>
     • input() returns input as a string, while sys.stdin returns the input as a string using the read() method.<br/>

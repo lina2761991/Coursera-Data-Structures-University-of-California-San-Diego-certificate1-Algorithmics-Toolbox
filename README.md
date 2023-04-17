@@ -213,8 +213,8 @@ is well-suited for problems that have a relatively small set of inputs. <br/>
 	
 	
 	
-### Notes 
-In the memoization implementation, we use a dictionary object called cache to store the results of function calls, and we use recursion to compute the results. <br/>
+
+=> In the memoization implementation, we use a dictionary object called cache to store the results of function calls, and we use recursion to compute the results. <br/>
 
 ### Tabulation <br/>
 #### what it does <br/>

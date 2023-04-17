@@ -25,3 +25,4 @@ if __name__ == '__main__':
     
     # I did the dynamic programming wit the help of this video explanation 
     # https://www.youtube.com/watch?v=jgiZlGzXMBw&t=10s&ab_channel=BackToBackSWE
+    # https://www.youtube.com/watch?v=WbwP4w6TpCk&ab_channel=WebDevSimplified

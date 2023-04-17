@@ -76,18 +76,21 @@ Greedy algorithms they cover as much as possible of the cases and solutions (tha
 if we have something sorted, the greedy move can be faster after sorting (which what we did in the knapsack problem)<br/>
 #### Python notes:<br/>
 List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list. <br/>
-Example:<br/>
-fruits = ["apple","banana","cherry","kiwi","mango"]<br/>
-newlist = []<br/>
+   
+   Example:<br/>
 
-for x in fruits:<br/>
-    if"a" in x:<br/>
-        newlist.append(x)<br/>
+	fruits = ["apple","banana","cherry","kiwi","mango"]<br/>
+	newlist = []<br/>
 
-print(newlist) <br/>
-A lambda function is a small anonymous function. It can take any number of arguments, but can only have one expression.<br/>
-Example:<br/>
-lst.sort(key = lambda x: x[0]/x[1], reverse = True)<br/>
+	for x in fruits:<br/>
+	    if"a" in x:<br/>
+		newlist.append(x)<br/>
+	print(newlist) <br/>
+
+	A lambda function is a small anonymous function. It can take any number of arguments, but can only have one expression.<br/>
+	Example:<br/>
+	lst.sort(key = lambda x: x[0]/x[1], reverse = True)<br/>
+	
 
 # week 4<br/>
 ## divide and conquer algorithm<br/>
@@ -113,55 +116,55 @@ any comparison algorithm can be shown as a huge tree ( cuz we'll always make cho
 #### binary search algorithm<br/>
 ##### the general steps:<br/>
 
-	1.Initialize the start and end indices of the search range, such that the range includes the entire input array.<br/>
-	2.While the start index is less than or equal to the end index, repeat the following steps:<br/>
- 	a. Compute the middle index of the current range.<br/>
- 	b. If the target element is equal to the middle element, return the middle index.<br/>
- 	c. If the target element is less than the middle element, set the end index to be one less than the middle index.<br/>
- 	d. If the target element is greater than the middle element, set the start index to be one more than the middle index.<br/>
-	3.If the target element is not found in the array, return -1.<br/>
+	1.Initialize the start and end indices of the search range, such that the range includes the entire input array.
+	2.While the start index is less than or equal to the end index, repeat the following steps:
+ 	a. Compute the middle index of the current range.
+ 	b. If the target element is equal to the middle element, return the middle index.
+ 	c. If the target element is less than the middle element, set the end index to be one less than the middle index.
+ 	d. If the target element is greater than the middle element, set the start index to be one more than the middle index.
+	3.If the target element is not found in the array, return -1.
 	
 	
 ##### the algorithm:<br/>
 
-	BinarySearch(K[0..n − 1],q)<br/>
-	minIndex ← 0<br/>
-	maxIndex ← n − 1<br/>
-	while maxIndex ≥ minIndex:<br/>
-		midIndex ← ⌊(minIndex + maxIndex)/2⌋<br/>
-		if K[midIndex] = q:<br/>
-			return midIndex<br/>
-		else if K[midIndex] < q:<br/>
-			minIndex ← midIndex + 1<br/>
-		else:<br/>
-			maxIndex ← midIndex − 1<br/>
-		return −1<br/>
+	BinarySearch(K[0..n − 1],q)
+	minIndex ← 0
+	maxIndex ← n − 1
+	while maxIndex ≥ minIndex:
+		midIndex ← ⌊(minIndex + maxIndex)/2⌋
+		if K[midIndex] = q:
+			return midIndex
+		else if K[midIndex] < q:
+			minIndex ← midIndex + 1
+		else:
+			maxIndex ← midIndex − 1
+		return −1
     
 #### quick sort algorithm<br/>
 ##### the general steps:<br/>
 
-    1. Choose a pivot element from the array.<br/>
-    2. Partition the array into two parts based on the pivot, with all elements smaller than the pivot on the left, and all elements larger on the right.<br/>
-    3. Recursively apply QuickSort to the left and right sub-arrays.<br/>
-    4. Merge the sorted sub-arrays to get the final sorted array.<br/>
+    1. Choose a pivot element from the array.
+    2. Partition the array into two parts based on the pivot, with all elements smaller than the pivot on the left, and all elements larger on the right.
+    3. Recursively apply QuickSort to the left and right sub-arrays.
+    4. Merge the sorted sub-arrays to get the final sorted array.
     
 There are different ways to choose a pivot element, such as selecting the first or last element in the array,i worked with selecting the last element 
 ##### python code of quick sort <br/><br/>
 
 
-	def quick_sort(arr):<br/><br/>
-    	if len(arr) <= 1:<br/>
+	def quick_sort(arr):
+    	if len(arr) <= 1:
         	return arr
-    	else:<br/>
-        	pivot = arr[-1]<br/>
-        	left = []<br/>
-        	right = []<br/>
-        	for i in range(len(arr)-1):<br/>
-            	if arr[i] < pivot:<br/>
-                	left.append(arr[i])<br/>
-            	else:<br/>
-                	right.append(arr[i])<br/>
-        	return quick_sort(left) + [pivot] + quick_sort(right)<br/>
+    	else:
+        	pivot = arr[-1]
+        	left = []
+        	right = []
+        	for i in range(len(arr)-1):
+            	if arr[i] < pivot:
+                	left.append(arr[i])
+            	else:
+                	right.append(arr[i])
+        	return quick_sort(left) + [pivot] + quick_sort(right)
 		
 # week 5 + 6 <br/>
 
@@ -181,17 +184,17 @@ is well-suited for problems that have a relatively small set of inputs. <br/>
 #### Fibonacci using memoization <br/> <br/>
 
 
-	def fibonacci(n, cache={}):<br/>
-		if n in cache:<br/>
-			return cache[n]<br/>
-		if n == 0:<br/>
-			result = 0<br/>
-		elif n == 1:<br/>
-			result = 1<br/>
-		else:<br/>
-			result = fibonacci(n-1) + fibonacci(n-2)<br/>
-		cache[n] = result<br/>
-		return result<br/>
+	def fibonacci(n, cache={}):
+		if n in cache:
+			return cache[n]
+		if n == 0:
+			result = 0
+		elif n == 1:
+			result = 1
+		else:
+			result = fibonacci(n-1) + fibonacci(n-2)
+		cache[n] = result
+		return result
 	
 	
 	
@@ -205,18 +208,18 @@ Tabulation is a bottom-up approach where we store the results of the subproblems
 #### Fibonacci using tabulation <br/> <br/>
 
 
-	def fibonacci(n):<br/>
-		if n == 0:<br/>
-			return 0<br/>
-		elif n == 1:<br/>
-			return 1<br/>
-		else:<br/>
-			table = [0] * (n + 1)<br/>
-			table[0] = 0<br/>
+	def fibonacci(n):
+		if n == 0:
+			return 0
+		elif n == 1:
+			return 1
+		else:
+			table = [0] * (n + 1)
+			table[0] = 0
 			table[1] = 1
-			for i in range(2, n+1):<br/>
-				table[i] = table[i-1] + table[i-2]<br/>
-			return table[n]<br/>
+			for i in range(2, n+1):
+				table[i] = table[i-1] + table[i-2]
+			return table[n]
 
 
 ##### Notes
@@ -238,11 +241,12 @@ runing time is O (n log n )<br/>
 efficient in practice <br/>
 when we have a recursive code at the end , we call it a tail recursion eliminator <br/>
 
-<br/>
+
 What to do if your solution doesn’t work?<br/>
-1. Wrong answer<br/>
-2. Time/memory limit exceeded<br/>
-3. Failed (runtime error) <br/>
+
+	1. Wrong answer<br/>
+	2. Time/memory limit exceeded<br/>
+	3. Failed (runtime error) <br/>
 
 
 the steps to follow :<br/>
@@ -263,18 +267,19 @@ much time reading the input/printing the output take)<br/>
 if __name__ == '__main__' in python meaning =>  It Allows You to Execute Code When the File Runs as a Script, but Not When It’s Imported as a Module<br/>
 
 #### the use of under score in python : <br/>
-* Python automatically stores the value of the last expression in the interpreter to a particular variable called "_." <br/>
-* Underscore(_) is also used to ignore the values.  
-* ignoring a value a, _, b = (1, 2, 3) # a = 1, b = 3 <br/>
-* Use in Looping,You can use underscore(_) as a variabl<br/>e in looping.<br/>
-for _ in range(5): print(_) <br/>
-* Single Pre Underscore is used for internal use. Most of us don't use it because of that reason. <br/>
+
+	* Python automatically stores the value of the last expression in the interpreter to a particular variable called "_." <br/>
+	* Underscore(_) is also used to ignore the values.  
+	* ignoring a value a, _, b = (1, 2, 3) # a = 1, b = 3 <br/>
+	* Use in Looping,You can use underscore(_) as a variabl<br/>e in looping.<br/>
+	for _ in range(5): print(_) <br/>
+	* Single Pre Underscore is used for internal use. Most of us don't use it because of that reason. <br/>
 
 #### single_postunderscore
-name_<br/>
-Sometimes if you want to use Python Keywords as a variable, function or class names, you can use this convention for that<br/>
-You can avoid conflicts with the Python Keywords by adding an underscore at the end of the name which you want to use.<br/>
-* difference between input and sys.stdin <br/>
+	name_<br/>
+	Sometimes if you want to use Python Keywords as a variable, function or class names, you can use this convention for that<br/>
+	You can avoid conflicts with the Python Keywords by adding an underscore at the end of the name which you want to use.<br/>
+	
 #### the key differences between sys.stdin and input() are:<br/>
     • input() reads input until a newline character is encountered, while sys.stdin reads the entire input stream until the end-of-file or input signal is received.
     • input() returns input as a string, while sys.stdin returns the input as a string using the read() method.

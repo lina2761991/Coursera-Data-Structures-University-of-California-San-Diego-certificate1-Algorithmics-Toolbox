@@ -9,41 +9,42 @@ The aim is to find out how stable your product is by stretching it beyond its ba
 
 ### A stress test consists of:<br/>
 
-	1. Your implementation of an algorithm.<br/> 
-	2. An alternative, trivial and slow, but correct implementation of an algorithm for the same problem.<br/>
-	3. A random test generator.<br/>
-	An example of stress testing:<br/>
-	calculating the max product of a list of numbers <br/>
-	the steps we did:<br/>
-	1. do a while loop on both solutions <br/>
-	2. give 2 solutions ; first one is simple (first reflection you had) and the second one is optimum<br/>
-	3. compare 2 results and display ok if they r equal, otherwise display both if they r different and break the while loop<br/>
-	4. once you face 2 different results, you visually determine the wrong output<br/>
-	5. you display the inputs that led to this result (debug)<br/>
-	6. correct the bug and run the test again <br/>
-	7. once everything is fixed, you comment out the slow (first reflection) solution and you stick with the optimum solution, then you submit it<br/>
+	1. Your implementation of an algorithm.
+	2. An alternative, trivial and slow, but correct implementation of an algorithm for the same problem.
+	3. A random test generator.
+	An example of stress testing:
+	calculating the max product of a list of numbers 
+	
+	the steps we did:
+	1. do a while loop on both solutions
+	2. give 2 solutions ; first one is simple (first reflection you had) and the second one is optimum
+	3. compare 2 results and display ok if they r equal, otherwise display both if they r different and break the while loop
+	4. once you face 2 different results, you visually determine the wrong output
+	5. you display the inputs that led to this result (debug)
+	6. correct the bug and run the test again 
+	7. once everything is fixed, you comment out the slow (first reflection) solution and you stick with the optimum solution, then you submit it
 	
 ## Notes<br/>
-Stress testing can include various activities such as:<br/>
+Stress testing can include various activities such as:
 
-	* Overloading the system with lots of jobs<br/>
-	* Removing system components<br/>
-	* Checking the behaviour when the number of users suddenly increases (known as spike tests)<br/>
-	* Checking the sustainability of a system over a period of time through a gradual increase in the number of users (known as soak tests)<br/>
-
-
-How Do You Stress Test a Software?<br/>
+	* Overloading the system with lots of jobs
+	* Removing system components
+	* Checking the behaviour when the number of users suddenly increases (known as spike tests)
+	* Checking the sustainability of a system over a period of time through a gradual increase in the number of users (known as soak tests)
 
 
-	    • Plan your test: The first thing to do is plan the test out. At this point, you’ll be gathering the data to be used in the test and defining the goals you 		have for the test itself.<br/>
-	    • Create automation scripts: Now you’re ready to create automation scripts to be used in the test. You’ll also want to create the test data ou will use in 			this scenario.<br/>
-	    • Script execution: You should now have everything you need ready for the test, so you’ll be ready to execute that script. Run the script, and store the 			results you get from the test.<br/>
-	    • Result analysis: You have the data, so now you’ll look at the test results. From this, you should be able to identify any bottlenecks in the system.<br/>
-	    • Optimization: Now you’ve done your analysis, you’ll be able to make the necessary changes. That may be fine-tuning the system, changing configurations, 			or optimizing the code to meet your goals.<br/>
+How Do You Stress Test a Software?
+
+
+	 • Plan your test: The first thing to do is plan the test out. At this point, you’ll be gathering the data to be used in the test and defining the goals you 		have for the test itself.
+	 • Create automation scripts: Now you’re ready to create automation scripts to be used in the test. You’ll also want to create the test data ou will use in this scenario.
+	 • Script execution: You should now have everything you need ready for the test, so you’ll be ready to execute that script. Run the script, and store the results you get from the test.
+	 • Result analysis: You have the data, so now you’ll look at the test results. From this, you should be able to identify any bottlenecks in the system.
+	 • Optimization: Now you’ve done your analysis, you’ll be able to make the necessary changes. That may be fine-tuning the system, changing configurations, or optimizing the code to meet your goals.
 	 
 	 
 	 
- a bottleneck refers to a component that limits the potential of other hardware due to differences in the maximum capabilities of the two components.<br/>
+ a bottleneck refers to a component that limits the potential of other hardware due to differences in the maximum capabilities of the two components.
 	    
 #### Tasks done in this part:<br/>
 sum_of_two_digits and maximum_pairwise_product<br/>
@@ -76,10 +77,9 @@ How do you decide which choice is optimal?<br/>
 Assume that you have an objective function that needs to be optimized (either maximized or minimized) at a given point. A Greedy algorithm makes greedy choices at each step to ensure that the objective function is optimized. The Greedy algorithm has only one shot to compute the optimal solution so that it never goes back and reverses the decision.<br/>
 ### Greedy algorithms have some advantages and disadvantages:<br/>
 
-	 1.It is quite easy to come up with a greedy algorithm (or even multiple greedy algorithms) for a problem.<br/>
-	 2. Analysing the run time for greedy algorithms will generally be much easier than for other techniques (like Divide and conquer). For the Divide and 		conquer technique, it is not clear whether the technique is fast or slow. This is because at each level of recursion the size of gets smaller and the number 		of sub-problems increases.<br/>
-	 3. The difficult part is that for greedy algorithms you have to work much harder to understand correctness issues. <br/>
-	  Even with the correct algorithm, it is hard to prove why it is correct. Proving that a greedy algorithm is correct is more of an art than a science. It 	    involves a lot of creativity.<br/>
+	 1.It is quite easy to come up with a greedy algorithm (or even multiple greedy algorithms) for a problem.
+	 2. Analysing the run time for greedy algorithms will generally be much easier than for other techniques (like Divide and conquer). For the Divide and conquer technique, it is not clear whether the technique is fast or slow. This is because at each level of recursion the size of gets smaller and the number of sub-problems increases.
+	 3. The difficult part is that for greedy algorithms you have to work much harder to understand correctness issues.Even with the correct algorithm, it is hard to prove why it is correct. Proving that a greedy algorithm is correct is more of an art than a science. It involves a lot of creativity.
 		
 Example of greedy algorithm is:<br/>
 knapsack problem(the spices problem)  – money change  – selection sort(with each iteration we select the minimum number and then swap it with the next number if it was smaller, its complexity is O(n²)) <br/>
@@ -90,15 +90,15 @@ if we have something sorted, the greedy move can be faster after sorting (which 
 #### Python notes:<br/>
 List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list. <br/>
    
-   Example:<br/>
+   Example:
 
-	fruits = ["apple","banana","cherry","kiwi","mango"]<br/>
-	newlist = []<br/>
+	fruits = ["apple","banana","cherry","kiwi","mango"]
+	newlist = []
 
-	for x in fruits:<br/>
-	    if"a" in x:<br/>
-		newlist.append(x)<br/>
-	print(newlist) <br/>
+	for x in fruits:
+	    if"a" in x:
+		newlist.append(x)
+	print(newlist) 
 
 	A lambda function is a small anonymous function. It can take any number of arguments, but can only have one expression.<br/>
 	Example:<br/>
@@ -109,8 +109,8 @@ List comprehension offers a shorter syntax when you want to create a new list ba
 ## divide and conquer algorithm<br/>
 If you want to solve a problem using a divide-and-conquer strategy, you have to think about the following three steps: <br/>
 
-	1. Breaking a problem into smaller sub-problems. (divide part)<br/>
-	2. Solving each sub-problem recursively. (conquer part) <br/>
+	1. Breaking a problem into smaller sub-problems. (divide part)
+	2. Solving each sub-problem recursively. (conquer part)
 	3. Combining a solution to the original problem out of solutions to sub-problems. The first two steps are the “divide” part, whereas the last step is the 	   “conquer” part. We illustrate this approach with a number of problems of progressing difficulty and then proceed to the programming challenges. (merge part)
 	
 	
@@ -260,17 +260,16 @@ when we have a recursive code at the end , we call it a tail recursion eliminato
 
 What to do if your solution doesn’t work?<br/>
 
-	1. Wrong answer<br/>
-	2. Time/memory limit exceeded<br/>
-	3. Failed (runtime error) <br/>
+	1. Wrong answer
+	2. Time/memory limit exceeded
+	3. Failed (runtime error) 
 
 
 the steps to follow :<br/>
 
-	* verify that you didn't exceed the constraints <br/>
-	* Design some general test(s) for which you know the correct answer. Don’t look at your<br/>
-	code’s answer for this test before you figure out what the answer should be with a pen and paper.<br/>
-	* If you got a time limit exceeded error measures how long your program works for the larger inputs. The following functions help measure the CPU time since 		the start of the program<br/>
+	* verify that you didn't exceed the constraints 
+	* Design some general test(s) for which you know the correct answer. Don’t look at your code’s answer for this test before you figure out what the answer should be with a pen and paper.
+	* If you got a time limit exceeded error measures how long your program works for the larger inputs. The following functions help measure the CPU time since the start of the program
 	
 python time.clock() returns the floating-point value in seconds.<br/>
 
@@ -284,12 +283,12 @@ if __name__ == '__main__' in python meaning =>  It Allows You to Execute Code Wh
 
 #### the use of under score in python : <br/>
 
-	* Python automatically stores the value of the last expression in the interpreter to a particular variable called "_." <br/>
+	* Python automatically stores the value of the last expression in the interpreter to a particular variable called "_." 
 	* Underscore(_) is also used to ignore the values.  
-	* ignoring a value a, _, b = (1, 2, 3) # a = 1, b = 3 <br/>
-	* Use in Looping,You can use underscore(_) as a variabl<br/>e in looping.<br/>
-	for _ in range(5): print(_) <br/>
-	* Single Pre Underscore is used for internal use. Most of us don't use it because of that reason. <br/>
+	* ignoring a value a, _, b = (1, 2, 3) # a = 1, b = 3 
+	* Use in Looping,You can use underscore(_) as a variabl<br/>e in looping.
+	for _ in range(5): print(_) 
+	* Single Pre Underscore is used for internal use. Most of us don't use it because of that reason.
 
 #### single_postunderscore
 	name_<br/>

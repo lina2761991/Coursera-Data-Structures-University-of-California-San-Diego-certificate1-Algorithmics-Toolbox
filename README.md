@@ -99,9 +99,9 @@ List comprehension offers a shorter syntax when you want to create a new list ba
 		newlist.append(x)
 	print(newlist) 
 
-	A lambda function is a small anonymous function. It can take any number of arguments, but can only have one expression.<br/>
-	Example:<br/>
-	lst.sort(key = lambda x: x[0]/x[1], reverse = True)<br/>
+	A lambda function is a small anonymous function. It can take any number of arguments, but can only have one expression.
+	Example
+	lst.sort(key = lambda x: x[0]/x[1], reverse = True)
 	
 
 # week 4<br/>

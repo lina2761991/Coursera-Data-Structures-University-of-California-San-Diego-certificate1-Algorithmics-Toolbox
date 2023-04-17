@@ -69,7 +69,7 @@ least_common_mltiple<br/>
 # week 3<br/>
 ## greedy algorithm <br/>
 
-## #What is a 'Greedy algorithm'?<br/>
+## Greedy algorithm<br/>
 A greedy algorithm, as the name suggests, always makes the choice that seems to be the best at that moment. This means that it makes a locally-optimal choice in the hope that this choice will lead to a globally-optimal solution.<br/>
 Pros: simple, easy and run fast <br/>
 Cons: doesn't provide global optimum solution<br/>
@@ -247,7 +247,7 @@ great article that sums up the difference between memoization and tabulation <br
 https://www.geeksforgeeks.org/tabulation-vs-memoization/?ref=rp<br/>
 difference between dynamic programming and divide and conquer is that in dynamic programming the sub-problems overlap( they r in common at some point (repetition) but in divide and conquer they don’t overlap.+<br/>
 
-### General Notes <br/>
+# General Notes <br/>
 the number of leaves in a tree must be at least n!<br/>
 The worst case runing algorithm is at least the depth of d<br/>
 l = 2^D , l is the number of leaves and D is the depth of the tree<br/>

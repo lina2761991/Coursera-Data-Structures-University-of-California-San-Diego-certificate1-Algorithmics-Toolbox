@@ -276,5 +276,5 @@ Sometimes if you want to use Python Keywords as a variable, function or class 
 You can avoid conflicts with the Python Keywords by adding an underscore at the end of the name which you want to use.<br/>
 * difference between input and sys.stdin <br/>
 #### the key differences between sys.stdin and input() are:<br/>
-    • input() reads input until a newline character is encountered, while sys.stdin reads the entire input stream until the end-of-file or input signal is received.<br/>
-    • input() returns input as a string, while sys.stdin returns the input as a string using the read() method.<br/>
+    • input() reads input until a newline character is encountered, while sys.stdin reads the entire input stream until the end-of-file or input signal is received.
+    • input() returns input as a string, while sys.stdin returns the input as a string using the read() method.

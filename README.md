@@ -237,14 +237,14 @@ Tabulation is a bottom-up approach where we store the results of the subproblems
 			return table[n]
 
 
-##### Notes
-In the tabulation implementation, we use an array called table to store the results of subproblems, and we use iteration to compute the results. <br/>
+
+==> In the tabulation implementation, we use an array called table to store the results of subproblems, and we use iteration to compute the results. <br/>
 
 ==> Both implementations achieve the same result, but the approach used is different. Memoization is a top-down approach that uses recursion, while tabulation is a bottom-up approach that uses iteration. <br/>
 
-great article that sums up the difference between memoization and tabulation <br/>
+==>  great article that sums up the difference between memoization and tabulation <br/>
 https://www.geeksforgeeks.org/tabulation-vs-memoization/?ref=rp<br/>
-difference between dynamic programming and divide and conquer is that in dynamic programming the sub-problems overlap( they r in common at some point (repetition) but in divide and conquer they don’t overlap.+<br/>
+==>  difference between dynamic programming and divide and conquer is that in dynamic programming the sub-problems overlap( they r in common at some point (repetition) but in divide and conquer they don’t overlap.+<br/>
 
 # General Notes <br/>
 the number of leaves in a tree must be at least n!<br/>

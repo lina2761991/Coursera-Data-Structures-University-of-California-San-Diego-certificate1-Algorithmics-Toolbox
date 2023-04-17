@@ -179,17 +179,19 @@ Memoization is a top-down approach where we cache the results of function calls 
 is well-suited for problems that have a relatively small set of inputs. <br/>
 
 #### Fibonacci using memoization <br/> <br/>
-def fibonacci(n, cache={}):<br/>
-	if n in cache:<br/>
-		return cache[n]<br/>
-	if n == 0:<br/>
-		result = 0<br/>
-	elif n == 1:<br/>
-		result = 1<br/>
-	else:<br/>
-		result = fibonacci(n-1) + fibonacci(n-2)<br/>
-	cache[n] = result<br/>
-	return result<br/>
+
+
+	def fibonacci(n, cache={}):<br/>
+		if n in cache:<br/>
+			return cache[n]<br/>
+		if n == 0:<br/>
+			result = 0<br/>
+		elif n == 1:<br/>
+			result = 1<br/>
+		else:<br/>
+			result = fibonacci(n-1) + fibonacci(n-2)<br/>
+		cache[n] = result<br/>
+		return result<br/>
 	
 	
 	
@@ -203,18 +205,18 @@ Tabulation is a bottom-up approach where we store the results of the subproblems
 #### Fibonacci using tabulation <br/> <br/>
 
 
-def fibonacci(n):<br/>
-	if n == 0:<br/>
-		return 0<br/>
-	elif n == 1:<br/>
-		return 1<br/>
-	else:<br/>
-		table = [0] * (n + 1)<br/>
-		table[0] = 0<br/>
-		table[1] = 1
-		for i in range(2, n+1):<br/>
-			table[i] = table[i-1] + table[i-2]<br/>
-		return table[n]<br/>
+	def fibonacci(n):<br/>
+		if n == 0:<br/>
+			return 0<br/>
+		elif n == 1:<br/>
+			return 1<br/>
+		else:<br/>
+			table = [0] * (n + 1)<br/>
+			table[0] = 0<br/>
+			table[1] = 1
+			for i in range(2, n+1):<br/>
+				table[i] = table[i-1] + table[i-2]<br/>
+			return table[n]<br/>
 
 
 ##### Notes

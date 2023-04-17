@@ -163,16 +163,70 @@ There are different ways to choose a pivot element, such as selecting the first 
                 	right.append(arr[i])<br/>
         	return quick_sort(left) + [pivot] + quick_sort(right)<br/>
 		
-# week 5 + 6<br/>
+# week 5 + 6 <br/>
 
 ## dynamic programming <br/>
 
 Dynamic Programming is mainly an optimization over plain recursion. Wherever we see a recursive solution that has repeated calls for the same inputs, we can optimize it using Dynamic Programming. The idea is to simply store the results of sub-problems so that we do not have to re-compute them when needed later. This simple optimization reduces time complexities from exponential to polynomial. <br/>
-* In this part I did a quizz , about number of paths in which I used the Blaise Pascal triangle( each number is sthe sum of numbers above it )
-=>whenever theres recursion, we can do dynamic programming to reduce the time complexity and not calculate smthg twice <br/><br/><br/><br/>
+=>whenever there's recursion, we can do dynamic programming to reduce the time complexity and not calculate something twice <br/>
+Tabulation and memoization are two techniques used in dynamic programming to optimize the execution of a function that has repeated and expensive computations. <br/>
+
+### Memoization <br/>
+#### Meaning : <br/>
+The term “Memoization” comes from the Latin word “memorandum” (to remember), which is commonly shortened to “memo” in American English, and which means “to transform the results of a function into something to remember.”<br/>
+#### What it does : <br/>
+Memoization is a top-down approach where we cache the results of function calls and return the cached result if the function is called again with the same inputs. It is used when we can divide the problem into sub-problems and the sub-problems have overlapping sub-problems. <br/>
+is well-suited for problems that have a relatively small set of inputs. <br/>
+
+#### Fibonacci using memoization <br/> <br/>
+def fibonacci(n, cache={}):<br/>
+	if n in cache:<br/>
+		return cache[n]<br/>
+	if n == 0:<br/>
+		result = 0<br/>
+	elif n == 1:<br/>
+		result = 1<br/>
+	else:<br/>
+		result = fibonacci(n-1) + fibonacci(n-2)<br/>
+	cache[n] = result<br/>
+	return result<br/>
+	
+	
+	
+### Notes 
+In the memoization implementation, we use a dictionary object called cache to store the results of function calls, and we use recursion to compute the results. <br/>
+
+### Tabulation <br/>
+#### what it does <br/>
+Tabulation is a bottom-up approach where we store the results of the subproblems in a table and use these results to solve larger subproblems until we solve the entire problem. It is used when we can define the problem as a sequence of subproblems and the subproblems do not overlap. Tabulation is typically implemented using iteration and is well-suited for problems that have a large set of inputs.<br/> 
+
+#### Fibonacci using tabulation <br/> <br/>
 
 
-# Notes ;
+def fibonacci(n):<br/>
+	if n == 0:<br/>
+		return 0<br/>
+	elif n == 1:<br/>
+		return 1<br/>
+	else:<br/>
+		table = [0] * (n + 1)<br/>
+		table[0] = 0<br/>
+		table[1] = 1
+		for i in range(2, n+1):<br/>
+			table[i] = table[i-1] + table[i-2]<br/>
+		return table[n]<br/>
+
+
+##### Notes
+In the tabulation implementation, we use an array called table to store the results of subproblems, and we use iteration to compute the results. <br/>
+
+==> Both implementations achieve the same result, but the approach used is different. Memoization is a top-down approach that uses recursion, while tabulation is a bottom-up approach that uses iteration. <br/>
+
+great article that sums up the difference between memoization and tabulation <br/>
+https://www.geeksforgeeks.org/tabulation-vs-memoization/?ref=rp<br/>
+difference between dynamic programming and divide and conquer is that in dynamic programming the sub-problems overlap( they r in common at some point (repetition) but in divide and conquer they don’t overlap.+<br/>
+
+### Notes ;
 <br/>
 the number of leaves in a tree must be at least n!<br/>
 The worst case runing algorithm is at least the depth of d<br/>

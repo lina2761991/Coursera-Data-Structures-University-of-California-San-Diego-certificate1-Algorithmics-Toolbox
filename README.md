@@ -31,14 +31,19 @@ Stress testing can include various activities such as:<br/>
 	* Checking the behaviour when the number of users suddenly increases (known as spike tests)<br/>
 	* Checking the sustainability of a system over a period of time through a gradual increase in the number of users (known as soak tests)<br/>
 
+
 How Do You Stress Test a Software?<br/>
+
+
 	    • Plan your test: The first thing to do is plan the test out. At this point, you’ll be gathering the data to be used in the test and defining the goals you 		have for the test itself.<br/>
 	    • Create automation scripts: Now you’re ready to create automation scripts to be used in the test. You’ll also want to create the test data ou will use in 			this scenario.<br/>
 	    • Script execution: You should now have everything you need ready for the test, so you’ll be ready to execute that script. Run the script, and store the 			results you get from the test.<br/>
 	    • Result analysis: You have the data, so now you’ll look at the test results. From this, you should be able to identify any bottlenecks in the system.<br/>
 	    • Optimization: Now you’ve done your analysis, you’ll be able to make the necessary changes. That may be fine-tuning the system, changing configurations, 			or optimizing the code to meet your goals.<br/>
-	    
-	    a bottleneck refers to a component that limits the potential of other hardware due to differences in the maximum capabilities of the two components.<br/>
+	 
+	 
+	 
+ a bottleneck refers to a component that limits the potential of other hardware due to differences in the maximum capabilities of the two components.<br/>
 	    
 #### Tasks done in this part:<br/>
 sum_of_two_digits and maximum_pairwise_product<br/>

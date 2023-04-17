@@ -67,7 +67,6 @@ last_digit_of_fibonacci_number<br/>
 greatest_common_diviser<br/>
 least_common_mltiple<br/>
 # week 3<br/>
-## Greedy algorithm <br/>
 
 ## Greedy algorithm<br/>
 A greedy algorithm, as the name suggests, always makes the choice that seems to be the best at that moment. This means that it makes a locally-optimal choice in the hope that this choice will lead to a globally-optimal solution.<br/>

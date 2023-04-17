@@ -6,34 +6,40 @@ this is wht i did in the first certificate of data structure certification of Un
 Stress testing generates random tests in an infinite loop and for each test, it launches your solution on this test and an alternative solution on the same test and compares the results<br/>
 Stress testing is also known as Endurance Testing or Torture Testing.It is used to determine how an application or system behaves when under extreme levels of stress. This testing puts the system or application through scenarios designed to push it beyond its normal limits.<br/>
 The aim is to find out how stable your product is by stretching it beyond its bandwidth capability. Stress testing evaluates how an application will behave beyond normal conditions and normal peak load.<br/>
+
 ### A stress test consists of:<br/>
-1. Your implementation of an algorithm.<br/> 
-2. An alternative, trivial and slow, but correct implementation of an algorithm for the same problem.<br/>
-3. A random test generator.<br/>
-An example of stress testing:<br/>
-calculating the max product of a list of numbers <br/>
-the steps we did:<br/>
-1. do a while loop on both solutions <br/>
-2. give 2 solutions ; first one is simple (first reflection you had) and the second one is optimum<br/>
-3. compare 2 results and display ok if they r equal, otherwise display both if they r different and break the while loop<br/>
-4. once you face 2 different results, you visually determine the wrong output<br/>
-5. you display the inputs that led to this result (debug)<br/>
-6. correct the bug and run the test again <br/>
-7. once everything is fixed, you comment out the slow (first reflection) solution and you stick with the optimum solution, then you submit it<br/>
+
+	1. Your implementation of an algorithm.<br/> 
+	2. An alternative, trivial and slow, but correct implementation of an algorithm for the same problem.<br/>
+	3. A random test generator.<br/>
+	An example of stress testing:<br/>
+	calculating the max product of a list of numbers <br/>
+	the steps we did:<br/>
+	1. do a while loop on both solutions <br/>
+	2. give 2 solutions ; first one is simple (first reflection you had) and the second one is optimum<br/>
+	3. compare 2 results and display ok if they r equal, otherwise display both if they r different and break the while loop<br/>
+	4. once you face 2 different results, you visually determine the wrong output<br/>
+	5. you display the inputs that led to this result (debug)<br/>
+	6. correct the bug and run the test again <br/>
+	7. once everything is fixed, you comment out the slow (first reflection) solution and you stick with the optimum solution, then you submit it<br/>
+	
 ## Notes<br/>
 Stress testing can include various activities such as:<br/>
-* Overloading the system with lots of jobs<br/>
-* Removing system components<br/>
-* Checking the behaviour when the number of users suddenly increases (known as spike tests)<br/>
-* Checking the sustainability of a system over a period of time through a gradual increase in the number of users (known as soak tests)<br/>
+
+	* Overloading the system with lots of jobs<br/>
+	* Removing system components<br/>
+	* Checking the behaviour when the number of users suddenly increases (known as spike tests)<br/>
+	* Checking the sustainability of a system over a period of time through a gradual increase in the number of users (known as soak tests)<br/>
 
 How Do You Stress Test a Software?<br/>
-    • Plan your test: The first thing to do is plan the test out. At this point, you’ll be gathering the data to be used in the test and defining the goals you have for the test itself.<br/>
-    • Create automation scripts: Now you’re ready to create automation scripts to be used in the test. You’ll also want to create the test data ou will use in this scenario.<br/>
-    • Script execution: You should now have everything you need ready for the test, so you’ll be ready to execute that script. Run the script, and store the results you get from the test.<br/>
-    • Result analysis: You have the data, so now you’ll look at the test results. From this, you should be able to identify any bottlenecks in the system.<br/>
-    • Optimization: Now you’ve done your analysis, you’ll be able to make the necessary changes. That may be fine-tuning the system, changing configurations, or optimizing the code to meet your goals.<br/>
-a bottleneck refers to a component that limits the potential of other hardware due to differences in the maximum capabilities of the two components.<br/>
+	    • Plan your test: The first thing to do is plan the test out. At this point, you’ll be gathering the data to be used in the test and defining the goals you 		have for the test itself.<br/>
+	    • Create automation scripts: Now you’re ready to create automation scripts to be used in the test. You’ll also want to create the test data ou will use in 			this scenario.<br/>
+	    • Script execution: You should now have everything you need ready for the test, so you’ll be ready to execute that script. Run the script, and store the 			results you get from the test.<br/>
+	    • Result analysis: You have the data, so now you’ll look at the test results. From this, you should be able to identify any bottlenecks in the system.<br/>
+	    • Optimization: Now you’ve done your analysis, you’ll be able to make the necessary changes. That may be fine-tuning the system, changing configurations, 			or optimizing the code to meet your goals.<br/>
+	    
+	    a bottleneck refers to a component that limits the potential of other hardware due to differences in the maximum capabilities of the two components.<br/>
+	    
 #### Tasks done in this part:<br/>
 sum_of_two_digits and maximum_pairwise_product<br/>
 # week 2<br/>
@@ -64,10 +70,12 @@ Cons: doesn't provide global optimum solution<br/>
 How do you decide which choice is optimal?<br/>
 Assume that you have an objective function that needs to be optimized (either maximized or minimized) at a given point. A Greedy algorithm makes greedy choices at each step to ensure that the objective function is optimized. The Greedy algorithm has only one shot to compute the optimal solution so that it never goes back and reverses the decision.<br/>
 ### Greedy algorithms have some advantages and disadvantages:<br/>
- 1.	  It is quite easy to come up with a greedy algorithm (or even multiple greedy algorithms) for a problem.<br/>
- 2.	  Analysing the run time for greedy algorithms will generally be much easier than for other techniques (like Divide and conquer). For the Divide and conquer technique, it is not clear whether the technique is fast or slow. This is because at each level of recursion the size of gets smaller and the number of sub-problems increases.<br/>
- 3.	  The difficult part is that for greedy algorithms you have to work much harder to understand correctness issues. <br/>
-Even with the correct algorithm, it is hard to prove why it is correct. Proving that a greedy algorithm is correct is more of an art than a science. It involves a lot of creativity.<br/>
+
+	 1.It is quite easy to come up with a greedy algorithm (or even multiple greedy algorithms) for a problem.<br/>
+	 2. Analysing the run time for greedy algorithms will generally be much easier than for other techniques (like Divide and conquer). For the Divide and 		conquer technique, it is not clear whether the technique is fast or slow. This is because at each level of recursion the size of gets smaller and the number 		of sub-problems increases.<br/>
+	 3. The difficult part is that for greedy algorithms you have to work much harder to understand correctness issues. <br/>
+	  Even with the correct algorithm, it is hard to prove why it is correct. Proving that a greedy algorithm is correct is more of an art than a science. It 	    involves a lot of creativity.<br/>
+		
 Example of greedy algorithm is:<br/>
 knapsack problem(the spices problem)  – money change  – selection sort(with each iteration we select the minimum number and then swap it with the next number if it was smaller, its complexity is O(n²)) <br/>
 ### Notes:<br/>
@@ -95,9 +103,12 @@ List comprehension offers a shorter syntax when you want to create a new list ba
 # week 4<br/>
 ## divide and conquer algorithm<br/>
 If you want to solve a problem using a divide-and-conquer strategy, you have to think about the following three steps: <br/>
-1. Breaking a problem into smaller sub-problems. (divide part)<br/>
-2. Solving each sub-problem recursively. (conquer part) <br/>
-3. Combining a solution to the original problem out of solutions to sub-problems. The first two steps are the “divide” part, whereas the last step is the “conquer” part. We illustrate this approach with a number of problems of progressing difficulty and then proceed to the programming challenges. (merge part)<br/>
+
+	1. Breaking a problem into smaller sub-problems. (divide part)<br/>
+	2. Solving each sub-problem recursively. (conquer part) <br/>
+	3. Combining a solution to the original problem out of solutions to sub-problems. The first two steps are the “divide” part, whereas the last step is the 	   “conquer” part. We illustrate this approach with a number of problems of progressing difficulty and then proceed to the programming challenges. (merge part)
+	
+	
 To use the divide and conquer algorithm, recursion is used. <br/>
 The complexity of the divide and conquer algorithm is calculated using the master theorem<br/>
 The master theorem is used in calculating the time complexity of recurrence relations (divide and conquer algorithms) in a simple and quick way. <br/>
@@ -250,19 +261,19 @@ What to do if your solution doesn’t work?<br/>
 
 
 the steps to follow :<br/>
-* verify that you didn't exceed the constraints <br/>
-* Design some general test(s) for which you know the correct answer. Don’t look at your<br/>
-code’s answer for this test before you figure out what the answer should be with a pen and paper.<br/>
-* If you got a time limit exceeded error measures how long your program works for the larger inputs. The following functions help measure the CPU time since the start of the program<br/>
+
+	* verify that you didn't exceed the constraints <br/>
+	* Design some general test(s) for which you know the correct answer. Don’t look at your<br/>
+	code’s answer for this test before you figure out what the answer should be with a pen and paper.<br/>
+	* If you got a time limit exceeded error measures how long your program works for the larger inputs. The following functions help measure the CPU time since 		the start of the program<br/>
+	
 python time.clock() returns the floating-point value in seconds.<br/>
 
-Measure the time for small tests, medium tests, and large tests. You may encounter one of<br/>
-the possible outcomes: <br/>
+Measure the time for small tests, medium tests, and large tests. You may encounter one of the possible outcomes: <br/>
 – Your program works for small and medium tests in time, but for larger tests, it is more than 10 times slower than needed (or just hangs for the large tests). In that case you probably have complexity issues. You may want to: <br/>
-∗ Measure the time parts of the program take separately (for example, how
-much time reading the input/printing the output take)<br/>
-∗ Compute the actual number of operations your algorithm and its parts do and see if it is as expected.<br/>
-∗ Check if you pass references to your functions (only applies to c++, in java and python is always referenced)<br/>
+	∗ Measure the time parts of the program take separately (for example, how much time reading the input/printing the output take)<br/>
+	∗ Compute the actual number of operations your algorithm and its parts do and see if it is as expected.<br/>
+	∗ Check if you pass references to your functions (only applies to c++, in java and python is always referenced)<br/>
 
 if __name__ == '__main__' in python meaning =>  It Allows You to Execute Code When the File Runs as a Script, but Not When It’s Imported as a Module<br/>
 

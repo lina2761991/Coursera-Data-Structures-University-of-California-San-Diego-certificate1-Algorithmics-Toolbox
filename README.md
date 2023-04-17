@@ -67,7 +67,7 @@ last_digit_of_fibonacci_number<br/>
 greatest_common_diviser<br/>
 least_common_mltiple<br/>
 # week 3<br/>
-## greedy algorithm <br/>
+## Greedy algorithm <br/>
 
 ## Greedy algorithm<br/>
 A greedy algorithm, as the name suggests, always makes the choice that seems to be the best at that moment. This means that it makes a locally-optimal choice in the hope that this choice will lead to a globally-optimal solution.<br/>
@@ -106,7 +106,7 @@ List comprehension offers a shorter syntax when you want to create a new list ba
 	
 
 # week 4<br/>
-## divide and conquer algorithm<br/>
+## Divide and conquer algorithm<br/>
 If you want to solve a problem using a divide-and-conquer strategy, you have to think about the following three steps: <br/>
 
 	1. Breaking a problem into smaller sub-problems. (divide part)
@@ -129,7 +129,7 @@ selection sort doesn't depend on the input data, its quadratic o( n² )<br/>
 merge sort is faster than selection sort, its speed is o(n log n );<br/>
  splitting is what does the log n cuz we keep splitting by 2 while n is the fact of merging and organizing <br/>
 any comparison algorithm can be shown as a huge tree ( cuz we'll always make choices )<br/>
-#### binary search algorithm<br/>
+#### Binary search algorithm<br/>
 ##### the general steps:<br/>
 
 	1.Initialize the start and end indices of the search range, such that the range includes the entire input array.
@@ -156,7 +156,7 @@ any comparison algorithm can be shown as a huge tree ( cuz we'll always make cho
 			maxIndex ← midIndex − 1
 		return −1
     
-#### quick sort algorithm<br/>
+#### Quick sort algorithm<br/>
 ##### the general steps:<br/>
 
     1. Choose a pivot element from the array.
@@ -184,7 +184,7 @@ There are different ways to choose a pivot element, such as selecting the first 
 		
 # week 5 + 6 <br/>
 
-## dynamic programming <br/>
+## Dynamic programming <br/>
 
 Dynamic Programming is mainly an optimization over plain recursion. Wherever we see a recursive solution that has repeated calls for the same inputs, we can optimize it using Dynamic Programming. The idea is to simply store the results of sub-problems so that we do not have to re-compute them when needed later. This simple optimization reduces time complexities from exponential to polynomial. <br/>
 =>whenever there's recursion, we can do dynamic programming to reduce the time complexity and not calculate something twice <br/>
